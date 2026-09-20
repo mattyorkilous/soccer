@@ -1,3 +1,3 @@
-# world-cup-predictor
+# soccer
 
-Uses historical match data to predict the 2026 world cup.
+Uses historical international match results to predict the 2030 World Cup.
