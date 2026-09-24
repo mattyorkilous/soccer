@@ -35,6 +35,8 @@
 - For method chains longer than a line, one method per line, indented
   one level relative to the object it acts on. Every chain carries
   `# fmt: skip`.
+- `fmt: skip` chains still aim for 72 columns; the lint only catches
+  them at 79.
 
 ```python
 matches_cleaned = (
@@ -54,7 +56,7 @@ matches_cleaned = (
 
 ## Docstrings and Comments
 
-- Public functions only — none on private functions or tests.
+- Never on private functions or tests.
 - Few public functions, each deep.
 - Where the *why* needs saying, comment the line, don't pad the
   docstring.

@@ -1,0 +1,47 @@
+# The formatter wraps code at 72; lint is the 79-column backstop for
+# what the formatter won't touch (fmt: skip chains, long strings).
+line-length = 72
+
+# Legacy modules, each removed as its strangler replacement lands.
+extend-exclude = [
+    'docs/',  # research throwaways, not project code
+    'scripts/main.py',
+    'src/soccer/__init__.py',
+    'src/soccer/clean_data.py',
+    'src/soccer/diagnostics.py',
+    'src/soccer/extract_features.py',
+    'src/soccer/select_model.py',
+    'src/soccer/simulate_draw.py',
+    'src/soccer/simulate_tournament.py',
+    'src/soccer/track_and_update_elos.py',
+]
+
+[format]
+quote-style = 'single'
+
+[lint]
+select = ['ALL']
+ignore = [
+    'COM812',  # conflicts with ruff format
+    'ISC001',  # conflicts with ruff format
+    'CPY001',  # personal repo, no copyright header
+    'RET504',  # standard: name the return value, then return it
+]
+
+[lint.per-file-ignores]
+'tests/**' = [
+    'S101',     # pytest asserts with bare assert
+    'D',        # no docstrings on tests
+    'PLR2004',  # expected values are literals
+    'INP001',   # tests directory is not a package
+]
+
+[lint.pycodestyle]
+max-line-length = 79
+max-doc-length = 79
+
+[lint.flake8-quotes]
+inline-quotes = 'single'
+
+[lint.pydocstyle]
+convention = 'google'

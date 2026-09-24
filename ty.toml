@@ -1,0 +1,21 @@
+[src]
+# Legacy modules, each removed as its strangler replacement lands.
+exclude = [
+    'docs/',  # research throwaways, not project code
+    'scripts/main.py',
+    'src/soccer/__init__.py',
+    'src/soccer/clean_data.py',
+    'src/soccer/diagnostics.py',
+    'src/soccer/extract_features.py',
+    'src/soccer/select_model.py',
+    'src/soccer/simulate_draw.py',
+    'src/soccer/simulate_tournament.py',
+    'src/soccer/track_and_update_elos.py',
+]
+
+[analysis]
+# Only `# ty: ignore[<rule>]` suppresses; blanket `# type: ignore` doesn't.
+respect-type-ignore-comments = false
+
+[rules]
+unused-type-ignore-comment = 'error'
