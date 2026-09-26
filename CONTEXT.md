@@ -21,3 +21,8 @@ _Avoid_: field.
 
 **Goals model** — something that turns a fixture into a probability for every scoreline.
 Win, draw and loss probabilities are derived from those scoreline probabilities; they are never predicted directly.
+
+**Host** — a qualified team playing some of its tournament matches in its own country. Those matches are home matches; every other tournament match is neutral.
+_Avoid_: host nation (for a country that is not playing), home team (for the listed-first side of a neutral fixture).
+
+**Pot** — one of the seeding tiers the draw deals from; each group takes one team from each pot. Hosts are always in the first pot.
