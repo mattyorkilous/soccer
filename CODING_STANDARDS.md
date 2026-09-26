@@ -25,9 +25,9 @@
   `matches_cleaned`.
 - Module-internal functions take a leading underscore:
   `_get_match_result()`.
-- Modules that *do* a pipeline step get verb names (`clean.py`,
-  `simulate.py`); modules that *are* a thing get noun names
-  (`tournament.py`, `features.py`).
+- Modules that *do* a pipeline step get bare verb names (`load.py`,
+  `simulate.py`). A module that *is* a thing — frozen dataclasses
+  with no methods — gets a noun name.
 
 ## Polars
 
