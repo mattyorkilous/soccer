@@ -1,8 +1,8 @@
-# Context
+# Soccer
 
 International football match prediction, and Monte Carlo simulation of a World Cup.
 
-## Glossary
+## Language
 
 **Match** — an international game that has been played and has a result.
 _Avoid_: game, fixture (for played games).
