@@ -22,6 +22,12 @@ _Avoid_: field.
 **Goals model** — something that turns a fixture into a probability for every scoreline.
 Win, draw and loss probabilities are derived from those scoreline probabilities; they are never predicted directly.
 
+**Backtest** — a test of a goals model on past matches. The model predicts each match using only the matches played before it, and each prediction is then scored against the real scoreline.
+_Avoid_: validation, test set (for the whole procedure).
+
+**DataFrame** — a polars table of rows and named columns.
+_Avoid_: frame (pandas language).
+
 **Host** — a qualified team playing some of its tournament matches in its own country. Those matches are home matches; every other tournament match is neutral.
 _Avoid_: host nation (for a country that is not playing), home team (for the listed-first side of a neutral fixture).
 
